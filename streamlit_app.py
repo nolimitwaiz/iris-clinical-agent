@@ -45,20 +45,20 @@ def _load_alternatives():
 drug_db = _load_drug_db()
 alternatives = _load_alternatives()
 
-# Tab layout (works on mobile and desktop)
-tab_chat, tab_patient, tab_reasoning = st.tabs(["Chat", "Patient", "Reasoning"])
+# 3-column layout
+left, center, right = st.columns([1, 2, 1])
 
-with tab_chat:
+with center:
     render_chat_interface(drug_db, alternatives)
 
-with tab_patient:
+with left:
     patient = st.session_state.get("current_patient")
     packets = st.session_state.get("current_packets")
     if patient:
         render_patient_dashboard(patient, packets)
     else:
-        st.info("Select a patient in the Chat tab first")
+        st.info("Select a patient to view dashboard")
 
-with tab_reasoning:
+with right:
     packets = st.session_state.get("current_packets")
     render_transparency_panel(packets)
