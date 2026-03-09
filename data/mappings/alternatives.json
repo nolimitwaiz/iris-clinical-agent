@@ -1,0 +1,62 @@
+[
+    {
+        "primary_drug": "sacubitril/valsartan",
+        "alternative_drug": "lisinopril",
+        "requires_safety_recheck": true,
+        "clinical_notes": "Requires 36 hour washout if switching from ARNI to ACEi. Start lisinopril at 2.5 to 5mg. Monitor potassium and creatinine in 1 to 2 weeks."
+    },
+    {
+        "primary_drug": "sacubitril/valsartan",
+        "alternative_drug": "valsartan",
+        "requires_safety_recheck": true,
+        "clinical_notes": "Can switch directly from ARNI to ARB without washout. Start at equivalent valsartan dose. Monitor potassium and creatinine in 1 to 2 weeks."
+    },
+    {
+        "primary_drug": "dapagliflozin",
+        "alternative_drug": "empagliflozin",
+        "requires_safety_recheck": false,
+        "clinical_notes": "Direct substitution within SGLT2i class. Same monitoring requirements."
+    },
+    {
+        "primary_drug": "metoprolol succinate",
+        "alternative_drug": "carvedilol",
+        "requires_safety_recheck": true,
+        "clinical_notes": "Different beta blocker profiles. Carvedilol has alpha blocking activity. When switching, start carvedilol at 3.125mg BID regardless of metoprolol dose. Titrate independently."
+    },
+    {
+        "primary_drug": "carvedilol",
+        "alternative_drug": "metoprolol succinate",
+        "requires_safety_recheck": true,
+        "clinical_notes": "When switching from carvedilol, start metoprolol succinate at 12.5 to 25mg daily. Titrate independently."
+    },
+    {
+        "primary_drug": "eplerenone",
+        "alternative_drug": "spironolactone",
+        "requires_safety_recheck": false,
+        "clinical_notes": "Spironolactone is lower cost alternative. Same potassium monitoring. May cause gynecomastia unlike eplerenone."
+    },
+    {
+        "primary_drug": "spironolactone",
+        "alternative_drug": "eplerenone",
+        "requires_safety_recheck": false,
+        "clinical_notes": "Eplerenone has fewer anti androgenic side effects. Higher cost. Same potassium monitoring."
+    },
+    {
+        "primary_drug": "furosemide",
+        "alternative_drug": "torsemide",
+        "requires_safety_recheck": false,
+        "clinical_notes": "Torsemide has better bioavailability and longer duration. Convert dose approximately 1:4 (torsemide:furosemide)."
+    },
+    {
+        "primary_drug": "furosemide",
+        "alternative_drug": "bumetanide",
+        "requires_safety_recheck": false,
+        "clinical_notes": "Bumetanide has more predictable absorption. Convert approximately 40mg furosemide to 1mg bumetanide."
+    },
+    {
+        "primary_drug": "lisinopril",
+        "alternative_drug": "enalapril",
+        "requires_safety_recheck": false,
+        "clinical_notes": "Direct ACE inhibitor substitution. Enalapril dosed twice daily unlike lisinopril once daily."
+    }
+]

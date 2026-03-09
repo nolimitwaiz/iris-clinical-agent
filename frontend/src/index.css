@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+  font-family: var(--font-family);
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: #1A1917;
+  background-color: #FAFAF7;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+select,
+button,
+textarea {
+  font-family: var(--font-family);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(128, 128, 128, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(128, 128, 128, 0.4);
+}
+
+/* Theme-aware select options */
+[data-theme="dark"] select option {
+  background: #1a1a1a;
+  color: #ccc;
+}
+
+[data-theme="light"] select option {
+  background: #ffffff;
+  color: #1a1917;
+}
+
+/* ── Premium Keyframes ─────────────────────────────────────────── */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulseGlow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 107, 0, 0);
+  }
+
+  50% {
+    box-shadow: 0 0 12px 2px rgba(255, 107, 0, 0.25);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes breathe {
+
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Shimmer bar for thinking indicator */
+.shimmer-bar {
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(26, 25, 23, 0.25) 50%,
+      transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+/* Chat bubble entrance animation */
+.chat-bubble-enter {
+  animation: chatEnter 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes chatEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Glass panel utility */
+.glass-panel {
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="light"] .glass-panel {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+/* Global transitions for theme switching */
+.theme-transition,
+.theme-transition *:not(canvas) {
+  transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease !important;
+}
+
+/* ── Aurora UI Enhancements ─────────────────────────────────────────── */
+
+@keyframes auroraShift {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  50% {
+    background-position: 100% 100%;
+  }
+
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.aurora-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  background-image:
+    radial-gradient(ellipse at 10% 20%, rgba(31, 23, 89, 0.4) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(9, 145, 153, 0.3) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 10%, rgba(200, 80, 100, 0.2) 0%, transparent 40%),
+    radial-gradient(ellipse at 80% 20%, rgba(40, 10, 80, 0.3) 0%, transparent 60%);
+  background-size: 200% 200%;
+  animation: auroraShift 20s ease-in-out infinite;
+  background-attachment: fixed;
+}
+
+[data-theme="light"] .aurora-bg {
+  background-image:
+    radial-gradient(ellipse at 10% 20%, rgba(130, 200, 255, 0.4) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(255, 180, 200, 0.3) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 10%, rgba(200, 230, 255, 0.4) 0%, transparent 40%),
+    radial-gradient(ellipse at 80% 20%, rgba(255, 230, 180, 0.3) 0%, transparent 60%);
+}
+
+@keyframes orbPulse {
+
+  0%,
+  100% {
+    transform: scale(1) translate(-50%, -50%);
+    box-shadow: 0 0 80px 20px rgba(255, 255, 255, 0.1), inset 0 0 60px 10px rgba(255, 255, 255, 0.2);
+  }
+
+  50% {
+    transform: scale(1.05) translate(-48%, -48%);
+    box-shadow: 0 0 120px 40px rgba(255, 255, 255, 0.15), inset 0 0 80px 20px rgba(255, 255, 255, 0.3);
+  }
+}
+
+.aurora-orb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(70vw, 300px);
+  height: min(70vw, 300px);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.05) 50%, transparent 70%);
+  backdrop-filter: blur(40px) saturate(150%);
+  -webkit-backdrop-filter: blur(40px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 80px 20px rgba(255, 255, 255, 0.1), inset 0 0 60px 10px rgba(255, 255, 255, 0.2);
+  z-index: 1;
+  animation: orbPulse 6s ease-in-out infinite;
+  pointer-events: auto;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.aurora-orb.listening {
+  background: radial-gradient(circle at 30% 30%, rgba(74, 222, 128, 0.5), rgba(74, 222, 128, 0.1) 50%, transparent 70%);
+  border-color: rgba(74, 222, 128, 0.6);
+  box-shadow: 0 0 120px 40px rgba(74, 222, 128, 0.2), inset 0 0 80px 20px rgba(74, 222, 128, 0.4);
+  animation: orbPulse 2s ease-in-out infinite;
+}
+
+.aurora-orb.speaking {
+  background: radial-gradient(circle at 30% 30%, rgba(96, 165, 250, 0.5), rgba(96, 165, 250, 0.1) 50%, transparent 70%);
+  border-color: rgba(96, 165, 250, 0.6);
+  box-shadow: 0 0 120px 40px rgba(96, 165, 250, 0.2), inset 0 0 80px 20px rgba(96, 165, 250, 0.4);
+  animation: orbPulse 3s ease-in-out infinite;
+}
+
+.aurora-orb.thinking {
+  background: radial-gradient(circle at 30% 30%, rgba(255, 107, 0, 0.5), rgba(255, 107, 0, 0.1) 50%, transparent 70%);
+  border-color: rgba(255, 107, 0, 0.6);
+  box-shadow: 0 0 100px 30px rgba(255, 107, 0, 0.2), inset 0 0 70px 15px rgba(255, 107, 0, 0.3);
+  animation: orbPulse 1.5s ease-in-out infinite;
+}
+
+[data-theme="light"] .aurora-orb {
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}

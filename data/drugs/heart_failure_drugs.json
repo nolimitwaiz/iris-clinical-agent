@@ -1,0 +1,577 @@
+[
+    {
+        "drug_name": "furosemide",
+        "brand_name": "Lasix",
+        "drug_class": "loop_diuretic",
+        "available_doses_mg": [20.0, 40.0, 80.0, 120.0, 160.0, 240.0],
+        "target_dose_mg": 40.0,
+        "starting_dose_mg": 20.0,
+        "max_dose_mg": 600.0,
+        "cost_per_month": {
+            "tier1_generic": 4.0,
+            "tier2_preferred": 8.0,
+            "tier3_nonpreferred": 15.0,
+            "uninsured": 25.0
+        },
+        "interactions": ["digoxin", "lithium", "aminoglycosides"],
+        "contraindications": ["anuria", "hepatic coma"],
+        "renal_adjustment": {
+            "egfr_threshold": 15.0,
+            "action": "monitor_closely"
+        },
+        "monitoring_requirements": ["BMP in 7 days after dose change", "daily weight", "potassium level"],
+        "side_effects": ["hypokalemia", "dehydration", "dizziness", "increased urination", "muscle cramps"]
+    },
+    {
+        "drug_name": "bumetanide",
+        "brand_name": "Bumex",
+        "drug_class": "loop_diuretic",
+        "available_doses_mg": [0.5, 1.0, 2.0, 4.0],
+        "target_dose_mg": 1.0,
+        "starting_dose_mg": 0.5,
+        "max_dose_mg": 10.0,
+        "cost_per_month": {
+            "tier1_generic": 8.0,
+            "tier2_preferred": 15.0,
+            "tier3_nonpreferred": 25.0,
+            "uninsured": 45.0
+        },
+        "interactions": ["digoxin", "lithium", "aminoglycosides"],
+        "contraindications": ["anuria", "hepatic coma"],
+        "renal_adjustment": {
+            "egfr_threshold": 15.0,
+            "action": "monitor_closely"
+        },
+        "monitoring_requirements": ["BMP in 7 days after dose change", "daily weight", "potassium level"],
+        "side_effects": ["hypokalemia", "dehydration", "dizziness", "increased urination", "muscle cramps"]
+    },
+    {
+        "drug_name": "torsemide",
+        "brand_name": "Demadex",
+        "drug_class": "loop_diuretic",
+        "available_doses_mg": [5.0, 10.0, 20.0, 40.0, 100.0],
+        "target_dose_mg": 20.0,
+        "starting_dose_mg": 10.0,
+        "max_dose_mg": 200.0,
+        "cost_per_month": {
+            "tier1_generic": 10.0,
+            "tier2_preferred": 18.0,
+            "tier3_nonpreferred": 30.0,
+            "uninsured": 55.0
+        },
+        "interactions": ["digoxin", "lithium", "aminoglycosides"],
+        "contraindications": ["anuria", "hepatic coma"],
+        "renal_adjustment": {
+            "egfr_threshold": 15.0,
+            "action": "monitor_closely"
+        },
+        "monitoring_requirements": ["BMP in 7 days after dose change", "daily weight", "potassium level"],
+        "side_effects": ["hypokalemia", "dehydration", "dizziness", "increased urination", "muscle cramps"]
+    },
+    {
+        "drug_name": "carvedilol",
+        "brand_name": "Coreg",
+        "drug_class": "beta_blocker",
+        "available_doses_mg": [3.125, 6.25, 12.5, 25.0],
+        "target_dose_mg": 25.0,
+        "starting_dose_mg": 3.125,
+        "max_dose_mg": 25.0,
+        "cost_per_month": {
+            "tier1_generic": 4.0,
+            "tier2_preferred": 10.0,
+            "tier3_nonpreferred": 20.0,
+            "uninsured": 35.0
+        },
+        "interactions": ["digoxin", "insulin", "clonidine", "verapamil", "diltiazem"],
+        "contraindications": ["severe bradycardia", "heart block greater than first degree", "decompensated heart failure", "severe hepatic impairment", "bronchial asthma"],
+        "renal_adjustment": {
+            "egfr_threshold": 0.0,
+            "action": "none"
+        },
+        "monitoring_requirements": ["heart rate", "blood pressure", "signs of heart failure worsening"],
+        "side_effects": ["dizziness", "fatigue", "bradycardia", "hypotension", "weight gain", "diarrhea"]
+    },
+    {
+        "drug_name": "metoprolol succinate",
+        "brand_name": "Toprol XL",
+        "drug_class": "beta_blocker",
+        "available_doses_mg": [12.5, 25.0, 50.0, 100.0, 200.0],
+        "target_dose_mg": 200.0,
+        "starting_dose_mg": 12.5,
+        "max_dose_mg": 200.0,
+        "cost_per_month": {
+            "tier1_generic": 4.0,
+            "tier2_preferred": 10.0,
+            "tier3_nonpreferred": 22.0,
+            "uninsured": 40.0
+        },
+        "interactions": ["clonidine", "verapamil", "diltiazem", "digoxin"],
+        "contraindications": ["severe bradycardia", "heart block greater than first degree", "decompensated heart failure", "cardiogenic shock"],
+        "renal_adjustment": {
+            "egfr_threshold": 0.0,
+            "action": "none"
+        },
+        "monitoring_requirements": ["heart rate", "blood pressure", "signs of heart failure worsening"],
+        "side_effects": ["fatigue", "dizziness", "bradycardia", "depression", "cold extremities"]
+    },
+    {
+        "drug_name": "lisinopril",
+        "brand_name": "Zestril",
+        "drug_class": "ace_inhibitor",
+        "available_doses_mg": [2.5, 5.0, 10.0, 20.0, 40.0],
+        "target_dose_mg": 20.0,
+        "starting_dose_mg": 2.5,
+        "max_dose_mg": 40.0,
+        "cost_per_month": {
+            "tier1_generic": 4.0,
+            "tier2_preferred": 8.0,
+            "tier3_nonpreferred": 15.0,
+            "uninsured": 20.0
+        },
+        "interactions": ["potassium supplements", "spironolactone", "eplerenone", "sacubitril/valsartan", "NSAIDs"],
+        "contraindications": ["angioedema", "bilateral renal artery stenosis", "pregnancy"],
+        "renal_adjustment": {
+            "egfr_threshold": 30.0,
+            "action": "reduce_dose"
+        },
+        "monitoring_requirements": ["potassium in 1 to 2 weeks", "creatinine in 1 to 2 weeks", "blood pressure"],
+        "side_effects": ["cough", "hyperkalemia", "dizziness", "hypotension", "acute kidney injury"]
+    },
+    {
+        "drug_name": "enalapril",
+        "brand_name": "Vasotec",
+        "drug_class": "ace_inhibitor",
+        "available_doses_mg": [2.5, 5.0, 10.0, 20.0],
+        "target_dose_mg": 10.0,
+        "starting_dose_mg": 2.5,
+        "max_dose_mg": 20.0,
+        "cost_per_month": {
+            "tier1_generic": 4.0,
+            "tier2_preferred": 8.0,
+            "tier3_nonpreferred": 15.0,
+            "uninsured": 22.0
+        },
+        "interactions": ["potassium supplements", "spironolactone", "eplerenone", "sacubitril/valsartan", "NSAIDs"],
+        "contraindications": ["angioedema", "bilateral renal artery stenosis", "pregnancy"],
+        "renal_adjustment": {
+            "egfr_threshold": 30.0,
+            "action": "reduce_dose"
+        },
+        "monitoring_requirements": ["potassium in 1 to 2 weeks", "creatinine in 1 to 2 weeks", "blood pressure"],
+        "side_effects": ["cough", "hyperkalemia", "dizziness", "hypotension", "acute kidney injury"]
+    },
+    {
+        "drug_name": "ramipril",
+        "brand_name": "Altace",
+        "drug_class": "ace_inhibitor",
+        "available_doses_mg": [1.25, 2.5, 5.0, 10.0],
+        "target_dose_mg": 5.0,
+        "starting_dose_mg": 1.25,
+        "max_dose_mg": 10.0,
+        "cost_per_month": {
+            "tier1_generic": 6.0,
+            "tier2_preferred": 12.0,
+            "tier3_nonpreferred": 20.0,
+            "uninsured": 30.0
+        },
+        "interactions": ["potassium supplements", "spironolactone", "eplerenone", "sacubitril/valsartan", "NSAIDs"],
+        "contraindications": ["angioedema", "bilateral renal artery stenosis", "pregnancy"],
+        "renal_adjustment": {
+            "egfr_threshold": 30.0,
+            "action": "reduce_dose"
+        },
+        "monitoring_requirements": ["potassium in 1 to 2 weeks", "creatinine in 1 to 2 weeks", "blood pressure"],
+        "side_effects": ["cough", "hyperkalemia", "dizziness", "hypotension", "acute kidney injury"]
+    },
+    {
+        "drug_name": "losartan",
+        "brand_name": "Cozaar",
+        "drug_class": "arb",
+        "available_doses_mg": [25.0, 50.0, 100.0],
+        "target_dose_mg": 50.0,
+        "starting_dose_mg": 25.0,
+        "max_dose_mg": 100.0,
+        "cost_per_month": {
+            "tier1_generic": 4.0,
+            "tier2_preferred": 10.0,
+            "tier3_nonpreferred": 18.0,
+            "uninsured": 30.0
+        },
+        "interactions": ["potassium supplements", "spironolactone", "eplerenone", "lithium", "NSAIDs"],
+        "contraindications": ["bilateral renal artery stenosis", "pregnancy"],
+        "renal_adjustment": {
+            "egfr_threshold": 30.0,
+            "action": "reduce_dose"
+        },
+        "monitoring_requirements": ["potassium in 1 to 2 weeks", "creatinine in 1 to 2 weeks", "blood pressure"],
+        "side_effects": ["dizziness", "hyperkalemia", "hypotension", "acute kidney injury"]
+    },
+    {
+        "drug_name": "valsartan",
+        "brand_name": "Diovan",
+        "drug_class": "arb",
+        "available_doses_mg": [40.0, 80.0, 160.0, 320.0],
+        "target_dose_mg": 160.0,
+        "starting_dose_mg": 40.0,
+        "max_dose_mg": 320.0,
+        "cost_per_month": {
+            "tier1_generic": 8.0,
+            "tier2_preferred": 15.0,
+            "tier3_nonpreferred": 30.0,
+            "uninsured": 60.0
+        },
+        "interactions": ["potassium supplements", "spironolactone", "eplerenone", "lithium", "NSAIDs"],
+        "contraindications": ["bilateral renal artery stenosis", "pregnancy"],
+        "renal_adjustment": {
+            "egfr_threshold": 30.0,
+            "action": "reduce_dose"
+        },
+        "monitoring_requirements": ["potassium in 1 to 2 weeks", "creatinine in 1 to 2 weeks", "blood pressure"],
+        "side_effects": ["dizziness", "hyperkalemia", "hypotension", "acute kidney injury"]
+    },
+    {
+        "drug_name": "sacubitril/valsartan",
+        "brand_name": "Entresto",
+        "drug_class": "arni",
+        "available_doses_mg": [24.0, 49.0, 97.0],
+        "target_dose_mg": 97.0,
+        "starting_dose_mg": 24.0,
+        "max_dose_mg": 97.0,
+        "cost_per_month": {
+            "tier1_generic": 45.0,
+            "tier2_preferred": 120.0,
+            "tier3_nonpreferred": 350.0,
+            "uninsured": 500.0
+        },
+        "interactions": ["lisinopril", "enalapril", "ramipril", "potassium supplements", "spironolactone", "eplerenone", "NSAIDs"],
+        "contraindications": ["ACE inhibitor use within 36 hours", "angioedema", "pregnancy"],
+        "renal_adjustment": {
+            "egfr_threshold": 30.0,
+            "action": "reduce_dose"
+        },
+        "monitoring_requirements": ["potassium in 1 to 2 weeks", "creatinine in 1 to 2 weeks", "blood pressure"],
+        "side_effects": ["hypotension", "hyperkalemia", "cough", "dizziness", "acute kidney injury"]
+    },
+    {
+        "drug_name": "spironolactone",
+        "brand_name": "Aldactone",
+        "drug_class": "mra",
+        "available_doses_mg": [12.5, 25.0, 50.0],
+        "target_dose_mg": 25.0,
+        "starting_dose_mg": 12.5,
+        "max_dose_mg": 50.0,
+        "cost_per_month": {
+            "tier1_generic": 4.0,
+            "tier2_preferred": 10.0,
+            "tier3_nonpreferred": 18.0,
+            "uninsured": 25.0
+        },
+        "interactions": ["potassium supplements", "lisinopril", "enalapril", "ramipril", "losartan", "valsartan", "sacubitril/valsartan", "NSAIDs", "trimethoprim"],
+        "contraindications": ["potassium greater than 5.0", "severe renal impairment", "Addison disease"],
+        "renal_adjustment": {
+            "egfr_threshold": 30.0,
+            "action": "avoid"
+        },
+        "monitoring_requirements": ["potassium in 1 week then monthly", "creatinine", "blood pressure"],
+        "side_effects": ["hyperkalemia", "gynecomastia", "dizziness", "GI upset"]
+    },
+    {
+        "drug_name": "eplerenone",
+        "brand_name": "Inspra",
+        "drug_class": "mra",
+        "available_doses_mg": [25.0, 50.0],
+        "target_dose_mg": 50.0,
+        "starting_dose_mg": 25.0,
+        "max_dose_mg": 50.0,
+        "cost_per_month": {
+            "tier1_generic": 15.0,
+            "tier2_preferred": 30.0,
+            "tier3_nonpreferred": 60.0,
+            "uninsured": 90.0
+        },
+        "interactions": ["potassium supplements", "lisinopril", "enalapril", "ramipril", "losartan", "valsartan", "sacubitril/valsartan", "NSAIDs", "trimethoprim"],
+        "contraindications": ["potassium greater than 5.0", "severe renal impairment", "Addison disease"],
+        "renal_adjustment": {
+            "egfr_threshold": 30.0,
+            "action": "avoid"
+        },
+        "monitoring_requirements": ["potassium in 1 week then monthly", "creatinine", "blood pressure"],
+        "side_effects": ["hyperkalemia", "dizziness", "GI upset"]
+    },
+    {
+        "drug_name": "dapagliflozin",
+        "brand_name": "Farxiga",
+        "drug_class": "sglt2i",
+        "available_doses_mg": [5.0, 10.0],
+        "target_dose_mg": 10.0,
+        "starting_dose_mg": 5.0,
+        "max_dose_mg": 10.0,
+        "cost_per_month": {
+            "tier1_generic": 35.0,
+            "tier2_preferred": 90.0,
+            "tier3_nonpreferred": 250.0,
+            "uninsured": 450.0
+        },
+        "interactions": ["insulin", "sulfonylureas", "loop diuretics"],
+        "contraindications": ["type 1 diabetes", "dialysis"],
+        "renal_adjustment": {
+            "egfr_threshold": 20.0,
+            "action": "avoid"
+        },
+        "monitoring_requirements": ["renal function", "volume status", "blood glucose if diabetic"],
+        "side_effects": ["genital mycotic infections", "urinary tract infections", "volume depletion", "diabetic ketoacidosis"]
+    },
+    {
+        "drug_name": "empagliflozin",
+        "brand_name": "Jardiance",
+        "drug_class": "sglt2i",
+        "available_doses_mg": [10.0, 25.0],
+        "target_dose_mg": 10.0,
+        "starting_dose_mg": 10.0,
+        "max_dose_mg": 25.0,
+        "cost_per_month": {
+            "tier1_generic": 35.0,
+            "tier2_preferred": 90.0,
+            "tier3_nonpreferred": 250.0,
+            "uninsured": 450.0
+        },
+        "interactions": ["insulin", "sulfonylureas", "loop diuretics"],
+        "contraindications": ["type 1 diabetes", "dialysis"],
+        "renal_adjustment": {
+            "egfr_threshold": 20.0,
+            "action": "avoid"
+        },
+        "monitoring_requirements": ["renal function", "volume status", "blood glucose if diabetic"],
+        "side_effects": ["genital mycotic infections", "urinary tract infections", "volume depletion", "diabetic ketoacidosis"]
+    },
+    {
+        "drug_name": "potassium chloride",
+        "brand_name": "Klor-Con",
+        "drug_class": "potassium_supplement",
+        "available_doses_mg": [10.0, 20.0, 40.0],
+        "target_dose_mg": 20.0,
+        "starting_dose_mg": 10.0,
+        "max_dose_mg": 80.0,
+        "cost_per_month": {
+            "tier1_generic": 4.0,
+            "tier2_preferred": 8.0,
+            "tier3_nonpreferred": 12.0,
+            "uninsured": 15.0
+        },
+        "interactions": ["spironolactone", "eplerenone", "lisinopril", "enalapril", "ramipril", "losartan", "valsartan", "sacubitril/valsartan"],
+        "contraindications": ["hyperkalemia", "severe renal impairment"],
+        "renal_adjustment": {
+            "egfr_threshold": 30.0,
+            "action": "avoid"
+        },
+        "monitoring_requirements": ["potassium level"],
+        "side_effects": ["GI upset", "nausea", "hyperkalemia"]
+    },
+    {
+        "drug_name": "hydralazine",
+        "brand_name": "Apresoline",
+        "drug_class": "vasodilator",
+        "available_doses_mg": [10.0, 25.0, 50.0, 100.0],
+        "target_dose_mg": 75.0,
+        "starting_dose_mg": 10.0,
+        "max_dose_mg": 300.0,
+        "cost_per_month": {
+            "tier1_generic": 8.0,
+            "tier2_preferred": 15.0,
+            "tier3_nonpreferred": 25.0,
+            "uninsured": 40.0
+        },
+        "interactions": ["MAO inhibitors"],
+        "contraindications": ["lupus", "mitral valve disease"],
+        "renal_adjustment": {
+            "egfr_threshold": 15.0,
+            "action": "reduce_dose"
+        },
+        "monitoring_requirements": ["blood pressure", "heart rate", "ANA if long term"],
+        "side_effects": ["headache", "tachycardia", "lupus like syndrome", "fluid retention"]
+    },
+    {
+        "drug_name": "isosorbide dinitrate",
+        "brand_name": "Isordil",
+        "drug_class": "vasodilator",
+        "available_doses_mg": [10.0, 20.0, 40.0],
+        "target_dose_mg": 40.0,
+        "starting_dose_mg": 10.0,
+        "max_dose_mg": 40.0,
+        "cost_per_month": {
+            "tier1_generic": 10.0,
+            "tier2_preferred": 20.0,
+            "tier3_nonpreferred": 35.0,
+            "uninsured": 55.0
+        },
+        "interactions": ["sildenafil", "tadalafil", "phosphodiesterase inhibitors"],
+        "contraindications": ["severe anemia", "concurrent PDE5 inhibitor use"],
+        "renal_adjustment": {
+            "egfr_threshold": 0.0,
+            "action": "none"
+        },
+        "monitoring_requirements": ["blood pressure", "headache resolution"],
+        "side_effects": ["headache", "dizziness", "hypotension", "flushing"]
+    },
+    {
+        "drug_name": "digoxin",
+        "brand_name": "Lanoxin",
+        "drug_class": "cardiac_glycoside",
+        "available_doses_mg": [0.0625, 0.125, 0.25],
+        "target_dose_mg": 0.125,
+        "starting_dose_mg": 0.125,
+        "max_dose_mg": 0.25,
+        "cost_per_month": {
+            "tier1_generic": 4.0,
+            "tier2_preferred": 8.0,
+            "tier3_nonpreferred": 15.0,
+            "uninsured": 20.0
+        },
+        "interactions": ["amiodarone", "verapamil", "furosemide", "carvedilol", "metoprolol succinate"],
+        "contraindications": ["ventricular fibrillation", "hypokalemia"],
+        "renal_adjustment": {
+            "egfr_threshold": 30.0,
+            "action": "reduce_dose"
+        },
+        "monitoring_requirements": ["digoxin level", "potassium", "renal function", "heart rate"],
+        "side_effects": ["nausea", "visual disturbances", "arrhythmias", "confusion"]
+    },
+    {
+        "drug_name": "metolazone",
+        "brand_name": "Zaroxolyn",
+        "drug_class": "thiazide_like_diuretic",
+        "available_doses_mg": [2.5, 5.0, 10.0],
+        "target_dose_mg": 5.0,
+        "starting_dose_mg": 2.5,
+        "max_dose_mg": 10.0,
+        "cost_per_month": {
+            "tier1_generic": 10.0,
+            "tier2_preferred": 20.0,
+            "tier3_nonpreferred": 35.0,
+            "uninsured": 50.0
+        },
+        "interactions": ["digoxin", "lithium", "furosemide"],
+        "contraindications": ["anuria", "hepatic coma"],
+        "renal_adjustment": {
+            "egfr_threshold": 15.0,
+            "action": "monitor_closely"
+        },
+        "monitoring_requirements": ["BMP in 48 to 72 hours", "daily weight", "potassium", "sodium"],
+        "side_effects": ["hypokalemia", "hyponatremia", "dehydration", "dizziness"]
+    },
+    {
+        "drug_name": "amlodipine",
+        "brand_name": "Norvasc",
+        "drug_class": "calcium_channel_blocker",
+        "available_doses_mg": [2.5, 5.0, 10.0],
+        "target_dose_mg": 5.0,
+        "starting_dose_mg": 2.5,
+        "max_dose_mg": 10.0,
+        "cost_per_month": {
+            "tier1_generic": 4.0,
+            "tier2_preferred": 8.0,
+            "tier3_nonpreferred": 15.0,
+            "uninsured": 20.0
+        },
+        "interactions": ["simvastatin at high doses", "cyclosporine"],
+        "contraindications": ["severe aortic stenosis", "cardiogenic shock"],
+        "renal_adjustment": {
+            "egfr_threshold": 0.0,
+            "action": "none"
+        },
+        "monitoring_requirements": ["blood pressure", "heart rate", "edema"],
+        "side_effects": ["peripheral edema", "dizziness", "flushing", "headache"]
+    },
+    {
+        "drug_name": "ivabradine",
+        "brand_name": "Corlanor",
+        "drug_class": "if_channel_blocker",
+        "available_doses_mg": [2.5, 5.0, 7.5],
+        "target_dose_mg": 7.5,
+        "starting_dose_mg": 2.5,
+        "max_dose_mg": 7.5,
+        "cost_per_month": {
+            "tier1_generic": 50.0,
+            "tier2_preferred": 120.0,
+            "tier3_nonpreferred": 300.0,
+            "uninsured": 450.0
+        },
+        "interactions": ["verapamil", "diltiazem", "strong CYP3A4 inhibitors"],
+        "contraindications": ["resting heart rate below 60", "severe hepatic impairment", "sick sinus syndrome"],
+        "renal_adjustment": {
+            "egfr_threshold": 0.0,
+            "action": "none"
+        },
+        "monitoring_requirements": ["heart rate", "blood pressure"],
+        "side_effects": ["bradycardia", "phosphenes", "atrial fibrillation", "hypertension"]
+    },
+    {
+        "drug_name": "warfarin",
+        "brand_name": "Coumadin",
+        "drug_class": "anticoagulant",
+        "available_doses_mg": [1.0, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 7.5, 10.0],
+        "target_dose_mg": 5.0,
+        "starting_dose_mg": 5.0,
+        "max_dose_mg": 10.0,
+        "cost_per_month": {
+            "tier1_generic": 4.0,
+            "tier2_preferred": 8.0,
+            "tier3_nonpreferred": 12.0,
+            "uninsured": 18.0
+        },
+        "interactions": ["aspirin", "NSAIDs", "amiodarone", "fluconazole", "many others"],
+        "contraindications": ["active bleeding", "pregnancy", "unsupervised patients"],
+        "renal_adjustment": {
+            "egfr_threshold": 0.0,
+            "action": "none"
+        },
+        "monitoring_requirements": ["INR weekly then monthly", "signs of bleeding"],
+        "side_effects": ["bleeding", "bruising", "skin necrosis"]
+    },
+    {
+        "drug_name": "aspirin",
+        "brand_name": "Bayer",
+        "drug_class": "antiplatelet",
+        "available_doses_mg": [81.0, 325.0],
+        "target_dose_mg": 81.0,
+        "starting_dose_mg": 81.0,
+        "max_dose_mg": 325.0,
+        "cost_per_month": {
+            "tier1_generic": 2.0,
+            "tier2_preferred": 4.0,
+            "tier3_nonpreferred": 6.0,
+            "uninsured": 8.0
+        },
+        "interactions": ["warfarin", "NSAIDs", "clopidogrel"],
+        "contraindications": ["active GI bleeding", "aspirin allergy"],
+        "renal_adjustment": {
+            "egfr_threshold": 0.0,
+            "action": "none"
+        },
+        "monitoring_requirements": ["signs of bleeding", "GI symptoms"],
+        "side_effects": ["GI upset", "bleeding", "tinnitus at high doses"]
+    },
+    {
+        "drug_name": "vericiguat",
+        "brand_name": "Verquvo",
+        "drug_class": "soluble_guanylate_cyclase_stimulator",
+        "available_doses_mg": [2.5, 5.0, 10.0],
+        "target_dose_mg": 10.0,
+        "starting_dose_mg": 2.5,
+        "max_dose_mg": 10.0,
+        "cost_per_month": {
+            "tier1_generic": 50.0,
+            "tier2_preferred": 150.0,
+            "tier3_nonpreferred": 350.0,
+            "uninsured": 500.0
+        },
+        "interactions": ["PDE5 inhibitors", "nitrates"],
+        "contraindications": ["pregnancy", "concurrent nitrate use"],
+        "renal_adjustment": {
+            "egfr_threshold": 15.0,
+            "action": "avoid"
+        },
+        "monitoring_requirements": ["blood pressure", "symptoms"],
+        "side_effects": ["hypotension", "anemia", "syncope"]
+    }
+]
